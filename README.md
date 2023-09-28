@@ -10,11 +10,11 @@ To compile and them using GNU Compiler Collection (gcc):
 2. navigate to the directory where the .s files are loaded to 
 3. run the following code for the example you want to run, where "program.s" is the filename:
 
-'''
+```
 gcc program.s -c -o program.o
 gcc program.o -o program
 ./program
-'''
+```
 
 The first command creates the object file from the assembly text file. Program.s is the assembly text file, and program.o is the output object file.
 	-c means create the object file
@@ -28,11 +28,11 @@ The final command (./program) runs the program executable.
 ## To Enable Debugging with gdb: 
 
 Instead compile using the following commands:
-'''
+```
 gcc program.s -g -c -o program.o
 gcc program.o -o program
 gdb program -tui
-'''
+```
 The addition of the -g option in the first command enables more detailed debugging info.
 The final command opens gdb with the Text User Interface (TUI), which allows you to set breakpoints and do other important things.
 
@@ -40,16 +40,16 @@ https://sourceware.org/gdb/onlinedocs/gdb/TUI.html#TUI
 
 Some particularly useful commands in GDB's TUI:
 Show the registers' values
-'''
+```
 layout regs
-'''
+```
 
 Set a breakpoint at line 22
-'''
+```
 break 22
-'''
+```
 
 Refresh the screen (if the formatting is off after)
-'''
+```
 refresh
-'''
+```
